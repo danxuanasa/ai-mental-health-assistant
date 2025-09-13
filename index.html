@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心灵守护者 - 您的情绪陪伴助手</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 背景渐变动画 -->
+    <div class="background-animation"></div>
+
+    <!-- 页面容器 -->
+    <div class="container">
+        <!-- 顶部区域 -->
+        <header class="header">
+            <h1 class="title">心灵守护者</h1>
+            <p class="subtitle">您的情绪陪伴助手</p>
+            <p class="tagline">在这里，每一份情绪都值得被倾听</p>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 聊天区域 -->
+            <section class="chat-section">
+                <!-- 聊天历史记录 -->
+                <div class="chat-history" id="chatHistory">
+                    <div class="message bot-message fade-in">
+                        <div class="message-content">
+                            <p>您好！我是心灵守护者，很高兴能陪伴您。有什么想和我聊聊的吗？</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 预设快速选项 -->
+                <div class="quick-options">
+                    <button class="quick-btn" data-text="感到焦虑">感到焦虑</button>
+                    <button class="quick-btn" data-text="心情低落">心情低落</button>
+                    <button class="quick-btn" data-text="压力很大">压力很大</button>
+                    <button class="quick-btn" data-text="想倾诉">想倾诉</button>
+                </div>
+
+                <!-- 输入区域 -->
+                <div class="input-section">
+                    <input type="text" id="userInput" placeholder="分享您的感受或问题..." autocomplete="off">
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 侧边功能区 -->
+            <aside class="sidebar">
+                <!-- 呼吸练习 -->
+                <div class="feature-card">
+                    <h3><i class="fas fa-lungs"></i> 呼吸练习</h3>
+                    <div class="breathing-circle" id="breathingCircle">
+                        <span id="breathingText">点击开始</span>
+                    </div>
+                </div>
+
+                <!-- 情绪日记 -->
+                <div class="feature-card">
+                    <h3><i class="fas fa-book"></i> 情绪日记</h3>
+                    <div class="mood-selector">
+                        <button class="mood-btn" data-mood="😊">😊</button>
+                        <button class="mood-btn" data-mood="😐">😐</button>
+                        <button class="mood-btn" data-mood="😔">😔</button>
+                        <button class="mood-btn" data-mood="😣">😣</button>
+                        <button class="mood-btn" data-mood="😢">😢</button>
+                    </div>
+                    <div class="mood-history" id="moodHistory">
+                        <!-- 情绪历史将在这里显示 -->
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <!-- 正念提醒弹窗 -->
+        <div class="mindfulness-reminder" id="mindfulnessReminder">
+            <div class="reminder-content">
+                <span class="close-btn" id="closeReminder">&times;</span>
+                <h3>正念时刻</h3>
+                <p>此刻，让我们关注呼吸，感受当下的存在。</p>
+                <button class="reminder-btn">我已接收到</button>
+            </div>
+        </div>
+
+        <!-- 思考中提示 -->
+        <div class="thinking-indicator" id="thinkingIndicator">
+            <p>助手正在思考...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
